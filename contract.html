@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>合同内容</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 合同内容页面特有样式 */
+    .contract-document {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      font-family: 'SimSun', serif;
+      line-height: 1.8;
+    }
+    
+    .contract-title {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      color: #333;
+    }
+    
+    .contract-section {
+      margin-bottom: 20px;
+    }
+    
+    .contract-text {
+      text-indent: 2em;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: #333;
+    }
+    
+    .contract-list {
+      margin-left: 2em;
+      margin-bottom: 12px;
+    }
+    
+    .contract-list-item {
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #333;
+    }
+    
+    .contract-signature {
+      margin-top: 32px;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .signature-part {
+      text-align: center;
+      width: 45%;
+    }
+    
+    .signature-label {
+      margin-bottom: 40px;
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- 顶部导航栏 -->
+  <header class="nav-bar">
+    <div class="nav-left">
+      <button class="back-btn" onclick="goBack()">&lt;</button>
+    </div>
+    <div class="nav-title">合同内容</div>
+    <div class="nav-right">
+      <button class="more-btn">•••</button>
+      <button class="minimize-btn">—</button>
+      <button class="close-btn">⊗</button>
+    </div>
+  </header>
+
+  <!-- 内容区域 -->
+  <div class="content">
+    <!-- 合同文档 -->
+    <div class="contract-document">
+      <h1 class="contract-title">关于《2024年【合同名称】合同》的作废协议</h1>
+      
+      <div class="contract-section">
+        <p class="contract-text">本协议由以下双方：</p>
+        <div class="contract-list">
+          <div class="contract-list-item">(1)（以下简称为"联合利华"）[[A]]</div>
+          <div class="contract-list-item">及</div>
+          <div class="contract-list-item">(2)（以下简称为"分销商"）[[B]]</div>
+        </div>
+        <p class="contract-text">一家依据中华人民共和国法律设立并合法存续的[[2011]]</p>
+        <p class="contract-text">（请按照营业执照写企业性质）</p>
+        <p class="contract-text">其注册地址为[[31]]，</p>
+      </div>
+      
+      <div class="contract-section">
+        <p class="contract-text">在上海市长宁区签署，1. 经双方友好协商，一致同意将[[44]]双方签订的</p>
+        <p class="contract-text">[[61]]（请填写合同名称），</p>
+        <p class="contract-text">对应合同编码为[[66]]（下称"原合同"）作废。</p>
+        <p class="contract-text">原合同自始无效，双方将不再履行原合同中所规定的权利和义务。</p>
+      </div>
+      
+      <div class="contract-section">
+        <p class="contract-text">2. 本协议经双方盖章后立即生效。本协议一式两份，双方各执一份。</p>
+      </div>
+      
+      <div class="contract-signature">
+        <div class="signature-part">
+          <div class="signature-label">联合利华：[[A]]</div>
+        </div>
+        <div class="signature-part">
+          <div class="signature-label">分销商：[[B]]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 返回上一页
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

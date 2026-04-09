@@ -1,0 +1,322 @@
+/* 全局样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* 顶部导航栏 */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: #007aff;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-left .back-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.nav-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nav-right {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-right button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* 搜索栏 */
+.search-bar {
+  padding: 12px 16px;
+  background-color: #f0f0f0;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #fff;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+/* 标签页 */
+.tabs {
+  display: flex;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px 0;
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #666;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.tab.active {
+  color: #007aff;
+  font-weight: 500;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #007aff;
+}
+
+/* 内容区域 */
+.content {
+  padding: 16px;
+  min-height: calc(100vh - 200px);
+}
+
+/* 卡片 */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+/* 卡片头部 */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  font-size: 16px;
+}
+
+.contract-no {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #faad14;
+}
+
+/* 卡片内容 */
+.card-body {
+  padding: 16px;
+}
+
+.info-row {
+  display: flex;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.info-row.highlighted {
+  background-color: #fffbe6;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin: 8px 0 16px 0;
+}
+
+.label {
+  width: 100px;
+  color: #666;
+  flex-shrink: 0;
+}
+
+.value {
+  flex: 1;
+  color: #333;
+  word-break: break-all;
+}
+
+/* 卡片底部 */
+.card-footer {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  border-top: 1px solid #f0f0f0;
+  background-color: #fafafa;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 8px 0;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid;
+}
+
+.reject-btn {
+  background-color: #fff;
+  color: #ff4d4f;
+  border-color: #ff4d4f;
+}
+
+.reject-btn:hover {
+  background-color: #fff2f0;
+}
+
+.approve-btn {
+  background-color: #007aff;
+  color: #fff;
+  border-color: #007aff;
+}
+
+.approve-btn:hover {
+  background-color: #0066cc;
+}
+
+/* 底部批量审批按钮 */
+.batch-approve-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.batch-approve-btn {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #007aff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.batch-approve-btn:hover {
+  background-color: #0066cc;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+  .nav-bar {
+    padding: 10px 12px;
+  }
+
+  .nav-title {
+    font-size: 15px;
+  }
+
+  .search-bar {
+    padding: 10px 12px;
+  }
+
+  .content {
+    padding: 12px;
+    min-height: calc(100vh - 180px);
+  }
+
+  .card-header,
+  .card-body,
+  .card-footer {
+    padding: 12px;
+  }
+
+  .info-row {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .label {
+    width: 90px;
+  }
+
+  .batch-approve-container {
+    padding: 12px;
+  }
+
+  .batch-approve-btn {
+    padding: 10px 0;
+    font-size: 15px;
+  }
+}
+
+/* 提示消息 */
+.toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.toast.show {
+  opacity: 1;
+}

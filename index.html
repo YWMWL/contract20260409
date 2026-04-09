@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>合同审批列表</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 顶部导航栏 -->
+  <header class="nav-bar">
+    <div class="nav-left">
+      <button class="back-btn" onclick="goBack()">&lt;</button>
+    </div>
+    <div class="nav-title">合同审批</div>
+    <div class="nav-right">
+      <button class="more-btn">•••</button>
+      <button class="minimize-btn">—</button>
+      <button class="close-btn">⊗</button>
+    </div>
+  </header>
+
+  <!-- 搜索栏 -->
+  <div class="search-bar">
+    <input type="text" placeholder="搜索" class="search-input">
+  </div>
+
+  <!-- 标签页 -->
+  <div class="tabs">
+    <button class="tab active" data-tab="pending">待审批</button>
+    <button class="tab" data-tab="approved">已通过</button>
+    <button class="tab" data-tab="rejected">已驳回</button>
+  </div>
+
+  <!-- 内容区域 -->
+  <div class="content">
+    <!-- 合同审批卡片 -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">
+          <span class="icon">📄</span>
+          <span class="contract-no">申请单号：2004018738483113...</span>
+        </div>
+        <div class="status-badge">其他协议</div>
+      </div>
+      
+      <div class="card-body">
+        <div class="info-row">
+          <div class="label">合同模板编号：</div>
+          <div class="value">CT20250018</div>
+        </div>
+        <div class="info-row">
+          <div class="label">合同模板名称：</div>
+          <div class="value">dadada</div>
+        </div>
+        <div class="info-row">
+          <div class="label">申请人：</div>
+          <div class="value">ebest-廖鑫</div>
+        </div>
+        <div class="info-row">
+          <div class="label">申请时间：</div>
+          <div class="value">2025-12-25 10:38:02</div>
+        </div>
+        <div class="info-row">
+          <div class="label">当前审批人：</div>
+          <div class="value">RTM Manager</div>
+        </div>
+      </div>
+      
+
+    </div>
+  </div>
+
+  <!-- 底部批量审批按钮 -->
+  <div class="batch-approve-container">
+    <button class="batch-approve-btn" onclick="batchApprove()">批量审批</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
